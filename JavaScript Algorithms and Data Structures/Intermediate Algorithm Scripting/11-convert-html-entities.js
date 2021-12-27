@@ -2,8 +2,8 @@
 
 
 function convertHTML(str) {
-  let htmlEntities = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" };
-  return str.split("").map(item => htmlEntities[item] || item).join("");
+    let htmlEntities = {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" };
+    return str.split("").map(item => htmlEntities[item] || item).join("");
 }
 
 convertHTML("Dolce & Gabbana");

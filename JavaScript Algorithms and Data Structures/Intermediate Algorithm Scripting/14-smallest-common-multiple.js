@@ -4,25 +4,25 @@
 
 
 function smallestCommons(arr) {
-  arr.sort((a,b) => a < b ? -1 : 1);
-  let num1 = arr[0];
-  let num2 = arr[1];
-  while (true) {
-    if (!checkDivisibility(num2) || num2 % num1 != 0) {
-      num2 += arr[1];
+    arr.sort((a,b) => a < b ? -1 : 1);
+    let num1 = arr[0];
+    let num2 = arr[1];
+    while (true) {
+        if (!checkDivisibility(num2) || num2 % num1 != 0) {
+            num2 += arr[1];
+        }
+        else {
+            break;
+        }
     }
-    else {
-      break;
+    function checkDivisibility(num) {
+        for (let i=arr[0]; i <= arr[1]; i++) {
+            if (num % i !== 0)
+                return false;
+            }
+        return true;
     }
-  }
-  function checkDivisibility(num) {
-    for (let i=arr[0]; i <= arr[1]; i++) {
-      if (num % i !== 0)
-        return false;
-    }
-    return true;
-  }
-  return num2;
+    return num2;
 }
 
 console.log(smallestCommons([1,13]));

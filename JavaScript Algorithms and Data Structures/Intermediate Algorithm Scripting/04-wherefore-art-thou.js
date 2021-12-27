@@ -4,13 +4,13 @@
 
 
 function whatIsInAName(collection, source) {
-  return collection.filter(function(obj) {
-    for (const key in source){
-      if (!obj.hasOwnProperty(key) || obj[key] !== source[key]) {
-        return false;
-      }
-    }
-    return true;
-  })
+    return collection.filter(function(obj) {
+        for (const key in source){
+            if (!obj.hasOwnProperty(key) || obj[key] !== source[key]) {
+                return false;
+             }
+        }
+        return true;
+    })
 }
 console.log(whatIsInAName([{ "apple": 1, "bat": 3 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }));

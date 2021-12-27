@@ -4,20 +4,20 @@
 
 
 function sumPrimes(num) {
-  let sum = 0;
-  for (let currentValue=2; currentValue <= num; currentValue++) {
-    if (isPrime(currentValue)) 
-      sum += currentValue;
-  }
-  return sum;
-
-  function isPrime(arg) {
-    for (let i = 2; i < arg; i++) {
-      if (arg % i === 0) 
-        return false;
+    let sum = 0;
+    for (let currentValue=2; currentValue <= num; currentValue++) {
+        if (isPrime(currentValue)) 
+            sum += currentValue;
     }
-    return true;
-  }
+return sum;
+
+    function isPrime(arg) {
+        for (let i = 2; i < arg; i++) {
+            if (arg % i === 0) 
+                return false;
+            }
+        return true;
+    }
 }
 
 sumPrimes(10);
